@@ -40,7 +40,7 @@ module Plugin::Worldon
           end
         elsif params.is_a? Array
           params.each_index do |i|
-            inner_prefix = "#{prefix}[#{i}]"
+            inner_prefix = "#{prefix}[]"
             results, files, to_multipart = build_query_recurse(params[i], results, files, inner_prefix, to_multipart)
           end
         else
